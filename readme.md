@@ -1,9 +1,9 @@
 
-# GDE alkalmazásfejlesztés VIZSGA 2023.06.08 17:30-20:30
+# GDE alkalmazásfejlesztés VIZSGA 2023.12.03 10:00-13:00
 
-Ez a 2023.06.08-i vizsga feladat
-A megoldásra 3 órátok van. A vizsga 17:30-20:30-ig tart.
-A github-on lévő utolsó commit nem lehet 20:30 után. Csak az azelőtti utolsó commmit-ot veszem figyelembe az értékelésnél.
+Ez a 2023.12.03-i vizsga feladat
+A megoldásra 3 órátok van. A vizsga 10:00-13:00-ig tart.
+A github-on lévő utolsó commit nem lehet 13:00 után. Csak az azelőtti utolsó commmit-ot veszem figyelembe az értékelésnél.
 
 
 ## Általános elvárások
