@@ -17,10 +17,13 @@ public class RunnerController {
     private RunnerRepository runnerRepository;
     @Autowired
     private LapTimeRepository lapTimeRepository;
+    @Autowired
+    private RunnerService runnerService;
     @GetMapping("/runners")
     public String getAllRunners(Model model) {
         List<RunnerEntity> runners = runnerRepository.findAll();
         model.addAttribute("runners", runners);
+        model.addAttribute("averagepace", runnerService.getAveragePace());
         return "runners";
     }
 
