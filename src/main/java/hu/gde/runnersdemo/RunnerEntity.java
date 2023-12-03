@@ -38,6 +38,10 @@ public class RunnerEntity {
         return shoeSize;
     }
 
+    public String getShoeName() {
+        return shoeName.getShoeNameName();
+    }
+
     public void setRunnerId(long runnerId) {
         this.runnerId = runnerId;
     }
@@ -56,5 +60,9 @@ public class RunnerEntity {
 
     public List<LapTimeEntity> getLaptimes() {
         return laptimes;
+    }
+
+    public void setShoeName(ShoeNameEntity shoeName) {
+        this.shoeName = shoeName;
     }
 }
