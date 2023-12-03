@@ -1,10 +1,10 @@
 {
 	"info": {
-		"_postman_id": "3280806a-0a27-445f-b66a-efc67205ca2f",
-		"name": "Runners demo",
+		"_postman_id": "195b1c9b-65de-4814-8ba4-018e35466796",
+		"name": "Runners demo AFT vizsga",
 		"description": "Runners Demo postman collection",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "9701363"
+		"_exporter_id": "31555952"
 	},
 	"item": [
 		{
@@ -68,6 +68,28 @@
 						"runner",
 						"1",
 						"averagelaptime"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getBiggestShoeSize",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/runner/biggestshoesize",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"runner",
+						"biggestshoesize"
 					]
 				}
 			},

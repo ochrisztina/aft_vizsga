@@ -3,6 +3,7 @@ package hu.gde.runnersdemo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.http.server.DelegatingServerHttpResponse;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -39,6 +40,31 @@ public class RunnerRestController {
             return averageLaptime;
         } else {
             return -1.0;
+        }
+    }
+
+    @GetMapping("/biggestshoesize")
+    public String getBiggestShoeSize() {
+        String name = "None";
+        List<RunnerEntity> runners = runnerRepository.findAll();
+        if (!runners.isEmpty()) {
+            long maxValue = -1;
+            for (RunnerEntity element: runners) {
+                long currentValue = element.getShoeSize();
+                if (currentValue > maxValue) {
+                    maxValue = currentValue;
+                    name = element.getRunnerName();
+                }
+            }
+            if (maxValue != -1) {
+                return "The name of the runner with the biggest shoe size: " + name;
+            }
+            else {
+                return "The shoe sizes are invalid.";
+            }
+        }
+        else {
+            return "Runner list is empty.";
         }
     }
 
